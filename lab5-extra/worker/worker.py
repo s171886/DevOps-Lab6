@@ -7,4 +7,4 @@ r = redis.Redis(host=redis_host, port=6379, decode_responses=True)
 
 while True:
     task = r.brpop("tasks")
-    print("Wykonano zadanie:", task)
+    print("Wykonano zadanie:", task, flush=True)
